@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "version": "0.0.1",
+
+  "name": "Upwork weekly summary",
+  "short_name": "Upwork weekly summary",
+  "description": "Extension to combine your weekly summary by contracts",
+
+  "author": "Vadim Novikov <ijcnvv@gmail.com>",
+
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+        "*://upwork.com/ab/reports/freelancer/weekly-summary*",
+        "*://www.upwork.com/ab/reports/freelancer/weekly-summary*"
+      ],
+      "js": ["js/index.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "icons": {
+    "128": "img/icon.png",
+    "64": "img/icon.png",
+    "32": "img/icon.png",
+    "48": "img/icon.png",
+    "16": "img/icon.png"
+  },
+
+  "permissions": ["*://upwork.com/*", "*://www.upwork.com/*"]
+}
