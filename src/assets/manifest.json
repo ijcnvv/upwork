@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "0.0.1",
+  "version": "0.0.2",
 
   "name": "Upwork weekly summary",
   "short_name": "Upwork weekly summary",
@@ -11,10 +11,7 @@
   "content_scripts": [
     {
       "all_frames": true,
-      "matches": [
-        "*://upwork.com/ab/reports/freelancer/weekly-summary*",
-        "*://www.upwork.com/ab/reports/freelancer/weekly-summary*"
-      ],
+      "matches": ["*://upwork.com/*", "*://www.upwork.com/*"],
       "js": ["js/index.js"],
       "run_at": "document_end"
     }
